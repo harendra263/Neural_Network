@@ -167,3 +167,4 @@ nbs/
 pyvenv.cfg
 lib64/
 .DS_Store
+data/
