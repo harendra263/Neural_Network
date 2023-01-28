@@ -7,8 +7,8 @@ Here is the plan for pytorch
 
 2. Logistic Regression
 
-## About Logistic Regression¶
-### Logistic Regression Basics¶
+## About Logistic Regression
+### Logistic Regression Basics
 **Classification algorithm**
 * Example: Spam vs No Spam
     * Input: Bunch of words

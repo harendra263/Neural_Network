@@ -1,28 +1,15 @@
-import pandas as pd
-import numpy as np
+import torchvision.transforms as transforms
+import torchvision.datasets as dsets
 
+train_dataset = dsets.MNIST(root='./data',
+                            train=True,
+                            transform=transforms.ToTensor(),
+                            download=True)
 
-url = 'http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data'
-column_names = ['MPG', 'Cylinders', 'Displacement', 'Horsepower', 'Weight',
-                'Acceleration', 'Model Year', 'Origin']
+print(len(train_dataset))
 
-raw_dataset = pd.read_csv(url, names=column_names,
-                          na_values='?', comment='\t',
-                          sep=' ', skipinitialspace=True)
+test_dataset = dsets.MNIST(root='./data',
+                           train=False,
+                           transform=transforms.ToTensor())
 
-
-
-dataset = raw_dataset.copy()
-
-print(dataset.isna().sum())
-
-dataset = dataset.dropna()
-
-dataset['Origin'] = dataset['Origin'].map({
-    1: "USA", 2: "EUROPE", 3: "JAPAN"
-})
-
-
-dataset = pd.get_dummies(dataset, columns=['Origin'], prefix='', prefix_sep=' ')
-
-print(dataset.tail())
+print(test_dataset)

@@ -65,7 +65,7 @@ epochs= 100
 
 for epoch in range(epochs):
     epoch += 1
-    
+
     # Convert the numpy array to torch tensor
     inputs = torch.from_numpy(x_train).requires_grad_().to(device)
     labels = torch.from_numpy(y_train).to(device)
@@ -103,6 +103,10 @@ plt.plot(x_train, predicted, '--', label='Predictions', alpha =0.5)
 
 plt.legend(loc='best')
 plt.savefig("img/pytorch_LinearRegression.png")
-plt.show()
+
+
+save_model = True
+if save_model:
+    torch.save(model.state_dict(), 'models/LinearRegression.pkl')
 
 
