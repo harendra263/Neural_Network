@@ -44,7 +44,7 @@ class LogisticRegression(nn.Module):
         self.linear = nn.Linear(input_dim, output_dim)
     
     def forward(self, x):
-        return torch.sigmoid(self.linear(x))
+        return self.linear(x)
     
 
 # sourcery skip: avoid-builtin-shadow
@@ -64,7 +64,7 @@ optimizer = torch.optim.SGD(model.parameters(), lr=LEARNING_RATE)
 iter = 0
 for _ in range(num_epochs):
     for _, (images, labels) in enumerate(train_loader):
-        images = images.view(-1, 28, 28).requires_grad_()
+        images = images.view(-1, 28 * 28).requires_grad_()
         labels = labels
 
         outputs = model(images)
@@ -79,12 +79,12 @@ for _ in range(num_epochs):
         optimizer.zero_grad()
         iter +=1
 
-        if iter % 500 == 0:
+        if iter % 450 == 0:
             correct = 0
             total = 0
 
             for images, labels in test_loader:
-                images = images.view(-1, 28, 28).requires_grad_()
+                images = images.view(-1, 28 * 28).requires_grad_()
                 outputs = model(images)
 
                 _, predicted = torch.max(outputs.data, 1)
