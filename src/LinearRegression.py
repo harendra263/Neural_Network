@@ -102,5 +102,7 @@ plt.plot(x_train, y_train, 'go', label='True Data', alpha=0.5)
 plt.plot(x_train, predicted, '--', label='Predictions', alpha =0.5)
 
 plt.legend(loc='best')
+plt.savefig("img/pytorch_LinearRegression.png")
 plt.show()
+
 
