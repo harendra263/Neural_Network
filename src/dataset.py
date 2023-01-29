@@ -1,5 +1,6 @@
 import torchvision.transforms as transforms
 import torchvision.datasets as dsets
+import torch
 
 train_dataset = dsets.MNIST(root='./data',
                             train=True,

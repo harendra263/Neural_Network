@@ -26,7 +26,7 @@ show_img = train_dataset[2][0].numpy().reshape(28,  28)
 # plt.show()
 
 BATCH_SIZE = 100
-N_ITERS = 3000
+N_ITERS = 5000
 
 num_epochs = N_ITERS / (len(train_dataset) / BATCH_SIZE)
 num_epochs = int(num_epochs)
@@ -79,7 +79,7 @@ for _ in range(num_epochs):
         optimizer.zero_grad()
         iter +=1
 
-        if iter % 450 == 0:
+        if iter % 50 == 0:
             correct = 0
             total = 0
 
