@@ -1,4 +1,4 @@
-![Pytorch](https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_656e174b12c49be1cfb4723a938ea43e/pytorch.png)
+![Pytorch](https://149695847.v2.pressablecdn.com/wp-content/uploads/2020/02/Pytorch.png =300x100)
 
 ## Pytorch - Tutorial
 
