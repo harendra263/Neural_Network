@@ -1,4 +1,4 @@
-![Pytorch](https://149695847.v2.pressablecdn.com/wp-content/uploads/2020/02/Pytorch.png =x100)
+![Pytorch](https://149695847.v2.pressablecdn.com/wp-content/uploads/2020/02/Pytorch.png)
 
 ## Pytorch - Tutorial
 
