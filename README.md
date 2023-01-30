@@ -38,14 +38,20 @@ Here is the plan for pytorch
         *   Output size = Input Size
 
 **Dimension Calculations**
-• O = W-K+2P + 1
-    • O: output height/length
-    • W: input height/length
-    • K: filter size (kernel size)
-    • P: padding
-        • P = K-1/2
-    • S. stride
+* O = W-K+2P + 1
+    * O: output height/length
+    * W: input height/length
+    * K: filter size (kernel size)
+    * P: padding
+        * P = K-1/2
+    * S: stride
 
 ![](img/example1.png)
 
 ![](img/example-2.png)
+
+## BUILDING A CONVOLUTIONAL NEURAL NETWORK USING PYTORCH
+
+![](img/building_cnn.png)
+![](img/output-1_conv.png)
+![](img/output_pooling.png)
