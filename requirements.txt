@@ -4,4 +4,5 @@ torch
 torchvision
 matplotlib
 seaborn
+scikit-learn
 
